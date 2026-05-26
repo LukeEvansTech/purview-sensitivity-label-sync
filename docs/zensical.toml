@@ -2,7 +2,7 @@
 site_name = "M365LabelSync"
 site_description = "Export and import M365 sensitivity labels between tenants"
 site_author = "Luke Evans"
-site_url = "https://lukeevansTech.github.io/M365LabelSync/"
+site_url = "https://lukeevanstech.github.io/M365LabelSync/"
 copyright = "Copyright &copy; 2026 Luke Evans"
 docs_dir = "docs"
 site_dir = "site"
