@@ -26,9 +26,8 @@ scheme = "default"
 primary = "indigo"
 accent = "indigo"
 
-[project.theme.palette.toggle]
-icon = "material/brightness-7"
-name = "Switch to dark mode"
+toggle_icon = "material/brightness-7"
+toggle_name = "Switch to dark mode"
 
 [[project.theme.palette]]
 media = "(prefers-color-scheme: dark)"
