@@ -21,6 +21,7 @@ language = "en"
 repo = "fontawesome/brands/github"
 
 [[project.theme.palette]]
+media = "(prefers-color-scheme: light)"
 scheme = "default"
 primary = "indigo"
 accent = "indigo"
@@ -28,6 +29,7 @@ toggle_icon = "material/brightness-7"
 toggle_name = "Switch to dark mode"
 
 [[project.theme.palette]]
+media = "(prefers-color-scheme: dark)"
 scheme = "slate"
 primary = "indigo"
 accent = "indigo"
