@@ -15,14 +15,25 @@ Both scripts import `LabelHelpers.psm1` at startup. The module provides connecti
 
 ## Data flow
 
-```text
-Source Tenant                    JSON Files                   Target Tenant
-┌──────────────┐               ┌──────────────┐             ┌──────────────┐
-│  Get-Label   │──export──▶    │ labels.json  │──import──▶  │  New-Label   │
-│              │               │              │             │  Set-Label   │
-│ Get-LabelPolicy│──export──▶  │ policies.json│──import──▶  │ New-LabelPolicy│
-│              │               │              │             │ Set-LabelPolicy│
-└──────────────┘               └──────────────┘             └──────────────┘
+```mermaid
+graph LR
+  subgraph source [Source Tenant]
+    direction TB
+    GL[Get-Label]
+    GP[Get-LabelPolicy]
+  end
+  subgraph json [JSON Files]
+    direction TB
+    LJ[labels.json]
+    PJ[label-policies.json]
+  end
+  subgraph target [Target Tenant]
+    direction TB
+    NL["New-Label<br/>Set-Label"]
+    NP["New-LabelPolicy<br/>Set-LabelPolicy"]
+  end
+  GL -- export --> LJ -- import --> NL
+  GP -- export --> PJ -- import --> NP
 ```
 
 ## Cross-tenant key: \_LabelPath

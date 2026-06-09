@@ -11,6 +11,13 @@ extra_css = ["assets/stylesheets/custom.css"]
 repo_url = "https://github.com/LukeEvansTech/purview-sensitivity-label-sync"
 repo_name = "LukeEvansTech/purview-sensitivity-label-sync"
 edit_uri = "edit/main/docs/docs/"
+nav = [
+  { "Home" = "index.md" },
+  { "Getting Started" = ["prerequisites.md", "quickstart.md"] },
+  { "Reference" = ["export-labels.md", "import-labels.md", "label-helpers.md"] },
+  { "Concepts" = ["architecture.md", "caveats.md"] },
+  { "Changelog" = "changelog.md" },
+]
 
 [project.theme]
 name = "material"
@@ -39,31 +46,6 @@ accent = "indigo"
 [project.theme.palette.toggle]
 icon = "material/brightness-4"
 name = "Switch to light mode"
-
-[[nav]]
-Home = "index.md"
-
-[[nav]]
-"Getting Started" = [
-  { "Prerequisites" = "prerequisites.md" },
-  { "Quick Start" = "quickstart.md" },
-]
-
-[[nav]]
-Reference = [
-  { "Export-Labels" = "export-labels.md" },
-  { "Import-Labels" = "import-labels.md" },
-  { "LabelHelpers Module" = "label-helpers.md" },
-]
-
-[[nav]]
-"Design" = [
-  { "Architecture" = "architecture.md" },
-  { "Cross-Tenant Caveats" = "caveats.md" },
-]
-
-[[nav]]
-Changelog = "changelog.md"
 
 [markdown_extensions]
 admonition = true
