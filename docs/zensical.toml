@@ -1,15 +1,15 @@
 [project]
-site_name = "M365LabelSync"
+site_name = "Purview Sensitivity Label Sync"
 site_description = "Export and import M365 sensitivity labels between tenants"
 site_author = "Luke Evans"
-site_url = "https://lukeevanstech.github.io/M365LabelSync/"
+site_url = "https://lukeevanstech.github.io/purview-sensitivity-label-sync/"
 copyright = "Copyright &copy; 2026 Luke Evans"
 docs_dir = "docs"
 site_dir = "site"
 dev_addr = "127.0.0.1:8000"
 extra_css = ["assets/stylesheets/custom.css"]
-repo_url = "https://github.com/LukeEvansTech/M365LabelSync"
-repo_name = "LukeEvansTech/M365LabelSync"
+repo_url = "https://github.com/LukeEvansTech/purview-sensitivity-label-sync"
+repo_name = "LukeEvansTech/purview-sensitivity-label-sync"
 edit_uri = "edit/main/docs/docs/"
 
 [project.theme]

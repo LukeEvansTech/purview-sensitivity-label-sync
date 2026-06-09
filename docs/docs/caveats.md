@@ -8,7 +8,7 @@ Use the `-SkipEncryption` flag on import unless you have specifically configured
 
 ## GUIDs
 
-All GUIDs (label, policy, user, group) are tenant-specific and cannot be preserved. M365LabelSync matches labels across tenants using the `_LabelPath` compound key instead.
+All GUIDs (label, policy, user, group) are tenant-specific and cannot be preserved. Purview Sensitivity Label Sync matches labels across tenants using the `_LabelPath` compound key instead.
 
 ## User and group scoping
 
@@ -30,7 +30,7 @@ Auto-labeling conditions are **not currently exported or imported**. These can b
 
 ## Duplicate sub-label DisplayNames
 
-Sub-labels can share a DisplayName across different parent labels (e.g. "All Employees" under both "Confidential" and "Highly Confidential"). M365LabelSync handles this correctly using `_LabelPath` compound keys, but be aware of it when reviewing exported JSON.
+Sub-labels can share a DisplayName across different parent labels (e.g. "All Employees" under both "Confidential" and "Highly Confidential"). Purview Sensitivity Label Sync handles this correctly using `_LabelPath` compound keys, but be aware of it when reviewing exported JSON.
 
 ## EncryptionRightsDefinitions
 

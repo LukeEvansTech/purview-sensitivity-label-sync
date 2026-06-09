@@ -1,8 +1,8 @@
-# M365LabelSync
+# Purview Sensitivity Label Sync
 
 **Export and import M365 sensitivity labels between tenants.**
 
-No native Microsoft tool exists for migrating sensitivity labels and label policies between M365 tenants. M365LabelSync fills this gap with a simple PowerShell 7+ solution using Security & Compliance cmdlets.
+No native Microsoft tool exists for migrating sensitivity labels and label policies between M365 tenants. Purview Sensitivity Label Sync fills this gap with a simple PowerShell 7+ solution using Security & Compliance cmdlets.
 
 ## What it does
 
