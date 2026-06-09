@@ -2,10 +2,10 @@
 
 ## Overview
 
-M365LabelSync is three PowerShell files with no build step:
+Purview Sensitivity Label Sync is three PowerShell files with no build step:
 
 ```
-M365LabelSync/
+purview-sensitivity-label-sync/
   LabelHelpers.psm1     # Shared module
   Export-Labels.ps1      # Export script
   Import-Labels.ps1      # Import script
@@ -27,7 +27,7 @@ Source Tenant                    JSON Files                   Target Tenant
 
 ## Cross-tenant key: _LabelPath
 
-GUIDs are tenant-specific and cannot be preserved across tenants. M365LabelSync uses a compound `_LabelPath` as the cross-tenant identifier:
+GUIDs are tenant-specific and cannot be preserved across tenants. Purview Sensitivity Label Sync uses a compound `_LabelPath` as the cross-tenant identifier:
 
 - **Parent labels**: `_LabelPath` = `DisplayName` (e.g. `Confidential`)
 - **Sub-labels**: `_LabelPath` = `Parent\Child` (e.g. `Confidential\All Employees`)

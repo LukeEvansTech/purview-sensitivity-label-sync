@@ -2,7 +2,7 @@
 
 ## PowerShell 7+
 
-M365LabelSync requires PowerShell 7 or later. Check your version:
+Purview Sensitivity Label Sync requires PowerShell 7 or later. Check your version:
 
 ```powershell
 $PSVersionTable.PSVersion

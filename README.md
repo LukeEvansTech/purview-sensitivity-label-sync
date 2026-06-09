@@ -1,8 +1,8 @@
-# M365LabelSync
+# Purview Sensitivity Label Sync
 
 Export and import sensitivity labels and label policies between Microsoft 365 tenants using Security & Compliance PowerShell.
 
-**[Documentation](https://lukeevansTech.github.io/M365LabelSync/)**
+**[Documentation](https://lukeevanstech.github.io/purview-sensitivity-label-sync/)**
 
 ## Prerequisites
 
@@ -89,7 +89,7 @@ All phases are idempotent — existing labels/policies (matched by `_LabelPath`/
 ## File Structure
 
 ```
-M365LabelSync/
+purview-sensitivity-label-sync/
   LabelHelpers.psm1     # Shared module (connection, logging, property mapping)
   Export-Labels.ps1      # Export labels + policies to JSON
   Import-Labels.ps1      # Import labels + policies from JSON
