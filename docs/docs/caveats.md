@@ -14,7 +14,7 @@ All GUIDs (label, policy, user, group) are tenant-specific and cannot be preserv
 
 Policy scoping that references specific users or groups (`ExchangeLocation`, `ModernGroupLocation`, etc.) is exported for reference but **not automatically remapped**. The import logs these for manual attention:
 
-```
+```text
 WARN: Policy 'Sales Policy': ExchangeLocation scoping needs manual remapping
 ```
 

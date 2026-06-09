@@ -22,6 +22,7 @@ Export and import sensitivity labels and label policies between Microsoft 365 te
 ```
 
 Outputs to `./export/`:
+
 - `labels.json` — all sensitivity labels (parents first, then sub-labels)
 - `label-policies.json` — all label policies
 - `export-log.txt` — operation log
@@ -54,20 +55,20 @@ Re-run the import to confirm idempotency — all labels should show as `SKIP`.
 
 ### Export-Labels.ps1
 
-| Parameter | Required | Default | Description |
-|-----------|----------|---------|-------------|
-| `-UserPrincipalName` | Yes | — | UPN of Compliance Admin in source tenant |
-| `-OutputDir` | No | `.\export` | Directory for exported files |
+| Parameter            | Required | Default    | Description                              |
+| -------------------- | -------- | ---------- | ---------------------------------------- |
+| `-UserPrincipalName` | Yes      | —          | UPN of Compliance Admin in source tenant |
+| `-OutputDir`         | No       | `.\export` | Directory for exported files             |
 
 ### Import-Labels.ps1
 
-| Parameter | Required | Default | Description |
-|-----------|----------|---------|-------------|
-| `-UserPrincipalName` | Yes | — | UPN of Compliance Admin in target tenant |
-| `-InputDir` | No | `.\export` | Directory containing exported JSON files |
-| `-SkipEncryption` | No | `$false` | Skip encryption settings (recommended for cross-tenant) |
-| `-SkipPolicies` | No | `$false` | Skip policy import |
-| `-WhatIf` | No | `$false` | Preview without making changes |
+| Parameter            | Required | Default    | Description                                             |
+| -------------------- | -------- | ---------- | ------------------------------------------------------- |
+| `-UserPrincipalName` | Yes      | —          | UPN of Compliance Admin in target tenant                |
+| `-InputDir`          | No       | `.\export` | Directory containing exported JSON files                |
+| `-SkipEncryption`    | No       | `$false`   | Skip encryption settings (recommended for cross-tenant) |
+| `-SkipPolicies`      | No       | `$false`   | Skip policy import                                      |
+| `-WhatIf`            | No       | `$false`   | Preview without making changes                          |
 
 ## Cross-Tenant Caveats
 
@@ -88,7 +89,7 @@ All phases are idempotent — existing labels/policies (matched by `_LabelPath`/
 
 ## File Structure
 
-```
+```text
 purview-sensitivity-label-sync/
   LabelHelpers.psm1     # Shared module (connection, logging, property mapping)
   Export-Labels.ps1      # Export labels + policies to JSON

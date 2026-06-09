@@ -13,7 +13,7 @@ No native Microsoft tool exists for migrating sensitivity labels and label polic
 
 ## Workflow
 
-```
+```text
 Source Tenant                          Target Tenant
 ┌─────────────┐    labels.json       ┌─────────────┐
 │  Get-Label   │──────────────────▶  │  New-Label   │
@@ -39,8 +39,8 @@ Source Tenant                          Target Tenant
 
 ## Files
 
-| File | Purpose |
-|------|---------|
+| File                | Purpose                                               |
+| ------------------- | ----------------------------------------------------- |
 | `LabelHelpers.psm1` | Shared module — connection, logging, property mapping |
-| `Export-Labels.ps1` | Export labels + policies to JSON |
-| `Import-Labels.ps1` | Import labels + policies from JSON |
+| `Export-Labels.ps1` | Export labels + policies to JSON                      |
+| `Import-Labels.ps1` | Import labels + policies from JSON                    |
