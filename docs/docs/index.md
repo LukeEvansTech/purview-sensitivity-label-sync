@@ -13,12 +13,20 @@ No native Microsoft tool exists for migrating sensitivity labels and label polic
 
 ## Workflow
 
-```text
-Source Tenant                          Target Tenant
-┌─────────────┐    labels.json       ┌─────────────┐
-│  Get-Label   │──────────────────▶  │  New-Label   │
-│  Get-Policy  │──────────────────▶  │  New-Policy  │
-└─────────────┘  label-policies.json └─────────────┘
+```mermaid
+graph LR
+  subgraph source [Source Tenant]
+    direction TB
+    A[Get-Label]
+    B[Get-LabelPolicy]
+  end
+  subgraph target [Target Tenant]
+    direction TB
+    C[New-Label]
+    D[New-LabelPolicy]
+  end
+  A -- labels.json --> C
+  B -- label-policies.json --> D
 ```
 
 1. **Export** — Run `Export-Labels.ps1` against the source tenant
