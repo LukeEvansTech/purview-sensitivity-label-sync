@@ -4,7 +4,7 @@
 
 Purview Sensitivity Label Sync is three PowerShell files with no build step:
 
-```
+```text
 purview-sensitivity-label-sync/
   LabelHelpers.psm1     # Shared module
   Export-Labels.ps1      # Export script
@@ -15,7 +15,7 @@ Both scripts import `LabelHelpers.psm1` at startup. The module provides connecti
 
 ## Data flow
 
-```
+```text
 Source Tenant                    JSON Files                   Target Tenant
 ┌──────────────┐               ┌──────────────┐             ┌──────────────┐
 │  Get-Label   │──export──▶    │ labels.json  │──import──▶  │  New-Label   │
@@ -25,7 +25,7 @@ Source Tenant                    JSON Files                   Target Tenant
 └──────────────┘               └──────────────┘             └──────────────┘
 ```
 
-## Cross-tenant key: _LabelPath
+## Cross-tenant key: \_LabelPath
 
 GUIDs are tenant-specific and cannot be preserved across tenants. Purview Sensitivity Label Sync uses a compound `_LabelPath` as the cross-tenant identifier:
 
