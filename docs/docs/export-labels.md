@@ -6,7 +6,7 @@ Exports all sensitivity labels and label policies from an M365 tenant to JSON fi
 
 | Parameter | Required | Default | Description |
 |-----------|----------|---------|-------------|
-| `-UserPrincipalName` | Yes | — | UPN of a Compliance Administrator in the source tenant |
+| `-UserPrincipalName` | Yes | N/A | UPN of a Compliance Administrator in the source tenant |
 | `-OutputDir` | No | `.\export` | Directory for exported JSON and log files |
 
 ## Usage
@@ -25,22 +25,22 @@ Exports all sensitivity labels and label policies from an M365 tenant to JSON fi
 
 Array of label objects, parents first then sub-labels, each containing:
 
-- **Identity** — `DisplayName`, `Name`, `Comment`, `Tooltip`, `Priority`, `ContentType`
-- **Hierarchy** — `ParentLabelDisplayName`, `_LabelPath` (compound key)
-- **Content marking** — header, footer, and watermark settings
-- **Encryption** — all encryption parameters, flagged with `_HasEncryption`
-- **AdvancedSettings** — hashtable of advanced settings
-- **Metadata** — `_SourceTenantLabelGuid`, `_ExportedAt`
+- **Identity** - `DisplayName`, `Name`, `Comment`, `Tooltip`, `Priority`, `ContentType`
+- **Hierarchy** - `ParentLabelDisplayName`, `_LabelPath` (compound key)
+- **Content marking** - header, footer, and watermark settings
+- **Encryption** - all encryption parameters, flagged with `_HasEncryption`
+- **AdvancedSettings** - hashtable of advanced settings
+- **Metadata** - `_SourceTenantLabelGuid`, `_ExportedAt`
 
 ### label-policies.json
 
 Array of policy objects containing:
 
-- **Identity** — `Name`, `Comment`, `Enabled`, `Priority`
-- **Label references** — `LabelPaths` array with resolved compound paths
-- **Scoping** — `ExchangeLocation`, `ModernGroupLocation` and exceptions
-- **AdvancedSettings** — hashtable of advanced policy settings
-- **Metadata** — `_SourceTenantPolicyGuid`, `_ExportedAt`
+- **Identity** - `Name`, `Comment`, `Enabled`, `Priority`
+- **Label references** - `LabelPaths` array with resolved compound paths
+- **Scoping** - `ExchangeLocation`, `ModernGroupLocation` and exceptions
+- **AdvancedSettings** - hashtable of advanced policy settings
+- **Metadata** - `_SourceTenantPolicyGuid`, `_ExportedAt`
 
 ## Behaviour
 

@@ -49,16 +49,16 @@ This handles the common case where sub-labels share a DisplayName under differen
 
 The import runs in three sequential phases:
 
-1. **Parent labels** — Created first so their GUIDs exist in the target tenant
-2. **Sub-labels** — Created with `ParentId` resolved from the parent's DisplayName in the target tenant
-3. **Policies** — Created with label GUIDs resolved from `_LabelPath` lookups against the target tenant
+1. **Parent labels** - Created first so their GUIDs exist in the target tenant
+2. **Sub-labels** - Created with `ParentId` resolved from the parent's DisplayName in the target tenant
+3. **Policies** - Created with label GUIDs resolved from `_LabelPath` lookups against the target tenant
 
 ## Policy label resolution
 
 The `Policy.Labels` array from `Get-LabelPolicy` may contain a mix of GUIDs and label Name values (some labels use a Name that matches their DisplayName rather than a GUID format). The export builds two lookup tables:
 
-- `GuidToLabelPath` — maps label GUIDs to their `_LabelPath`
-- `NameToLabelPath` — maps label Names to their `_LabelPath`
+- `GuidToLabelPath` - maps label GUIDs to their `_LabelPath`
+- `NameToLabelPath` - maps label Names to their `_LabelPath`
 
 Both are tried during policy export to ensure all references resolve.
 

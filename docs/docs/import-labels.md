@@ -6,7 +6,7 @@ Imports sensitivity labels and label policies into an M365 tenant from exported 
 
 | Parameter | Required | Default | Description |
 |-----------|----------|---------|-------------|
-| `-UserPrincipalName` | Yes | — | UPN of a Compliance Administrator in the target tenant |
+| `-UserPrincipalName` | Yes | N/A | UPN of a Compliance Administrator in the target tenant |
 | `-InputDir` | No | `.\export` | Directory containing `labels.json` and `label-policies.json` |
 | `-SkipEncryption` | No | `$false` | Skip encryption settings when creating labels |
 | `-SkipPolicies` | No | `$false` | Skip importing label policies |
