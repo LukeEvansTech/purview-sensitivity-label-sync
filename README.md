@@ -8,9 +8,11 @@ Export and import sensitivity labels and label policies between Microsoft 365 te
 
 - **PowerShell 7+**
 - **ExchangeOnlineManagement module v3.4+**
+
   ```powershell
   Install-Module ExchangeOnlineManagement -MinimumVersion 3.4.0
   ```
+
 - **Compliance Administrator** role in both source and target tenants
 
 ## Quick Start
@@ -95,7 +97,7 @@ purview-sensitivity-label-sync/
   Export-Labels.ps1      # Export labels + policies to JSON
   Import-Labels.ps1      # Import labels + policies from JSON
   README.md              # This file
-  CLAUDE.md              # Project context for AI assistants
+  AGENTS.md              # Project context for AI assistants
   export/                # Default output directory
     labels.json          # Exported labels (parents first, then sub-labels)
     label-policies.json  # Exported label policies
